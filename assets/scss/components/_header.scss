@@ -1,0 +1,528 @@
+//! Header File Start
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  box-shadow: 0 1px 1px #00000050;
+  transition: all .3s ease;
+  margin-bottom: 1px;
+
+  &.nightMode{
+    background-color: $backgroundClr;
+    box-shadow: 0 1px 1px #fff;
+  }
+
+  .headerButtons {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .changes {
+      width: 150px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .langs {
+        width: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 0.1px solid #aaa;
+        border-radius: 7px;
+
+        .language {
+          width: 40%;
+          opacity: 0.2;
+          cursor: pointer;
+          user-select: none;
+          transition: all .3s ease;
+
+          &:hover{
+            opacity: 0.6;
+          }
+
+          &.active {
+            opacity: 1;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .modes {
+        width: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 0.1px solid #aaa;
+        border-radius: 7px;
+
+        .mode {
+          width: 40%;
+          text-align: center;
+          cursor: pointer;
+          font-size: 18px;
+          opacity: 0.2;
+          transition: all .3s ease;
+
+          &:hover{
+            &.sun {
+              opacity: 0.6;
+            }
+            &.moon {
+              opacity: 0.6;
+            }
+          }
+
+          &.active {
+            &.sun {
+              opacity: 1;
+            }
+            &.moon {
+              opacity: 1;
+            }
+          }
+        }
+
+        .sun{
+          &.nightMode{
+            color: #fff;
+          }
+        }
+
+        .moon{
+          &.nightMode{
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .downloadBtn {
+      width: 150px;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+      color: $primaryClr;
+      border: 0.1px solid #aaa;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+
+      &:hover {
+        box-shadow: 0px 0px 7px 3px #00000050;
+      }
+
+      &.nightMode{
+        color: #fff;
+      }
+    }
+  }
+
+  .headerLeft {
+    width: 70%;
+    display: flex;
+
+    .aboutProfile {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .profilePhoto {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: transparent;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .socialList {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border: 0.1px solid #aaa;
+        border-radius: 7px;
+        position: absolute;
+        top: 140px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in;
+
+        &.active {
+          top: 180px;
+          opacity: 1;
+          visibility: visible;
+          z-index: 999;
+        }
+
+        .socialItem {
+          padding: 10px 10px;
+
+          a {
+            color: $primaryClr;
+            font-size: 18px;
+            display: flex;
+            transition: all .3s ease;
+
+            &:hover{
+              text-decoration: underline;
+            }
+
+            i {
+              margin-right: 10px;
+            }
+
+            &.pHn {
+              color: #000;
+            }
+
+            &.gMl {
+              color: #08851b;
+            }
+
+            &.lIn {
+              color: #0077b5;
+            }
+
+            &.gHb {
+              color: #2b3137;
+            }
+          }
+
+          .socialLink{
+            &.nightMode{
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .barBtn{
+      display: none;
+
+      &.nightMode{
+        i{
+          color: #fff;
+        }
+      }
+    }
+
+    .navBar {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+
+      &.nightMode{
+        background-color: $backgroundClr;
+      }
+
+      .menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menuItem {
+          width: 25%;
+
+          .menuLink{
+            &.nightMode{
+              color: #fff;
+            }
+          }
+
+          .menuLink {
+            font-size: 25px;
+            font-weight: 700;
+            color: $primaryClr;
+            transition: all 0.3s ease;
+
+            &:hover {
+              color: $secondClr;
+            }
+
+            &.active {
+              color: #d9601a;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Header Responsive Start
+@media (max-width: 1300px) {
+  .header {
+    padding: 15px 0;
+
+    .headerButtons {
+      width: 20%;
+    }
+
+    .headerLeft {
+      width: 80%;
+
+      .aboutProfile {
+        width: 30%;
+
+        .socialList {
+          top: 140px;
+          left: 20px;
+        }
+      }
+
+      .navBar {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .header {
+    .headerLeft {
+      .navBar {
+        .menu {
+          padding: 0 20px;
+
+          .menuItem {
+            a {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .header {
+    flex-direction: column;
+
+    .headerButtons {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      // align-items:baseline;
+      padding: 0 40px;
+
+      .changes {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+    }
+
+    .headerLeft {
+      width: 100%;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 20px 50px;
+      position: relative;
+
+      .aboutProfile {
+        .profilePhoto {
+          width: 150px;
+          height: 100px;
+          border-radius: 0;
+
+          img {
+            border-radius: 0;
+          }
+        }
+
+        .socialList {
+          top: 100px;
+          left: -70px;
+
+          &.active {
+            top: 140px;
+          }
+        }
+      }
+
+      .navBar {
+        width: 30%;
+        position: absolute;
+        left: 0;
+        top: 120%;
+        border: 0.1px solid #aaa;
+        border-radius: 7px;
+        padding: 15px 0;
+        opacity: 0;
+        visibility: hidden;
+        left: -25%;
+        transition: all .3s ease;
+
+        &.active{
+          opacity: 1;
+          visibility: visible;
+          left: 0;
+        }
+
+        .menu {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .menuItem {
+            width: 100%;
+
+            a {
+              text-align: center;
+              width: 100%;
+              display: inline-block;
+              font-size: 22px;
+              padding: 10px 10px;
+            }
+          }
+        }
+      }
+
+      .barBtn{
+        display: block;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    .headerLeft {
+      .aboutProfile {
+        .socialList {
+          left: -110px;
+          z-index: 99;
+          background-color: #ccc;
+          border: 0.1px solid #777;
+        }
+      }
+      .navBar {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    .headerButtons {
+      width: 100%;
+
+      .changes {
+        width: 120px;
+        margin-bottom: 10px;
+  
+        .langs {
+          width: 50px;
+        }
+  
+        .modes {
+          width: 50px;
+
+          .mode{
+            font-size: 15px;
+          }
+        }
+      }
+  
+      .downloadBtn {
+        width: 130px;
+        padding: 10px;
+      }
+    }
+    .headerLeft {
+      .aboutProfile {
+        .socialList {
+          left: -135px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    .headerButtons {
+      padding: 0 10px;
+
+      .changes {
+        width: 120px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+  
+        .langs {
+          width: 50px;
+        }
+  
+        .modes {
+          width: 50px;
+
+          .mode{
+            font-size: 15px;
+          }
+        }
+      }
+  
+      .downloadBtn {
+        width: 130px;
+        padding: 5px 10px;
+      }
+    }
+    .headerLeft {
+      .aboutProfile {
+        margin-right: 10px;
+
+        .socialList {
+          left: -150px;
+        }
+      }
+      .navBar {
+        width: 70%;
+      }
+    }
+  }
+}
+// Header Responsive End
+
+//! Header File End

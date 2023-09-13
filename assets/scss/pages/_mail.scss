@@ -1,0 +1,164 @@
+//! Mail File Start
+.mail {
+  padding: 80px 0;
+  width: 100%;
+
+  .mailTitle {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    color: $primaryClr;
+    padding: 40px 80px;
+    margin-bottom: 40px;
+  }
+
+  .mailForm {
+    background-color: #8c897b;
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 800px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .mailLabel {
+      width: 80%;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .mailInp {
+      width: 80%;
+      height: 40px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: transparent;
+      outline: none;
+    }
+
+    .textArea {
+      width: 80%;
+      height: 150px;
+      resize: none;
+      font-size: 24px;
+      padding: 15px;
+      border-radius: 10px;
+      border: transparent;
+      outline: none;
+    }
+
+    .formBtn {
+      width: 80%;
+      margin-top: 20px;
+      font-size: 24px;
+      padding: 15px 0;
+      border-radius: 10px;
+      border: transparent;
+      outline: none;
+      background-color: #04aa6d;
+      transition: all .3s ease;
+
+      &:hover{
+        background-color: #007a00;
+      }
+
+      &:active{
+        transform: scale(0.96);
+      }
+    }
+  }
+}
+
+//** Mail Responsive Start
+@media (max-width: 1000px) {
+  .mail {
+    .mailForm {
+      width: 500px;
+
+      .textArea {
+        line-height: 120%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mail {
+    padding: 40px 0;
+
+    .mailTitle {
+      padding: 40px 80px;
+      margin-bottom: 0;
+    }
+
+    .mailForm {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .mail {
+    padding: 40px 0;
+
+    .mailTitle {
+      padding: 20px 40px 30px;
+    }
+
+    .mailForm {
+      width: 300px;
+
+      .textArea {
+        width: 80%;
+        height: 100px;
+      }
+
+      .formBtn {
+        font-size: 22px;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .mail {
+    padding: 30px 0;
+
+    .mailForm {
+      width: 200px;
+
+      .mailLabel {
+        width: 85%;
+        font-size: 22px;
+      }
+
+      .mailInp {
+        width: 85%;
+        height: 30px;
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      .textArea {
+        width: 85%;
+        height: 100px;
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      .formBtn {
+        font-size: 20px;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+//** Mail Responsive End
+//! Mail File End

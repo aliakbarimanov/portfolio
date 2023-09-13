@@ -1,0 +1,15 @@
+colors::
+
+#232622
+#3e4034
+#f3de79
+#8c897b
+#d9601a
+
+
+bar icon-dan kenara basildiqda menu baglanmalidir.!!
+
+JS - de funksiyalar yazmaq lazimdir.
+
+
+accordion - + da problem var

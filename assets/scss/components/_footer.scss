@@ -1,0 +1,116 @@
+//! Footer Start
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 30px 20px;
+  border-top: 0.1px solid $primaryClr;
+
+  .footerTop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerLists {
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .footerMenuList {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .footerMenuItem {
+          .footerMenuLink {
+            color: $primaryClr;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 15px 20px 15px 15px;
+            border-radius: 8px;
+            transition: all .3s ease;
+
+            &:hover{
+              background-color: #00000030;
+            }
+          }
+        }
+      }
+
+      .footerSocialList {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .footerSocialItem {
+          .footerSocialLink {
+            color: $primaryClr;
+            font-size: 19px;
+            font-weight: 600;
+            padding: 15px 20px 15px 10px;
+            border-radius: 8px;
+            transition: all .3s ease;
+
+            i{
+              margin-right: 10px;
+            }
+
+            &:hover{
+              background-color: #00000030;
+            }
+          }
+        }
+      }
+    }
+
+    .footerDownloadBtn {
+      width: 50%;
+      display: flex;
+      justify-content: end;
+      align-self: flex-start;
+      padding-right: 80px;
+
+      a{
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: $primaryClr;
+        border: 0.1px solid #aaa;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        user-select: none;
+
+        &:hover {
+          box-shadow: 0px 0px 7px 3px #00000050;
+        }
+  
+        &.nightMode {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .footerBottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .owner{
+      color: $primaryClr;
+      font-size: 20px;
+    }
+
+    .currentYear{
+      color: $primaryClr;
+      font-size: 20px;
+    }
+  }
+}
+//! Footer End

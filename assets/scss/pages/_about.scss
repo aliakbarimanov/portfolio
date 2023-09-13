@@ -1,0 +1,268 @@
+//! About File Start
+.about {
+  width: 100%;
+
+  &.nightMode {
+    background-color: $backgroundClr;
+  }
+
+  .aboutTitle {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    color: $primaryClr;
+    padding: 40px 80px;
+    margin-bottom: 40px;
+
+    &.nightMode {
+      color: #fff;
+    }
+  }
+}
+
+//* Tab Start
+.tab {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+
+  .tabHeader {
+    width: 100%;
+
+    .tabHeaderList {
+      width: 100%;
+      display: flex;
+
+      .tabHeaderItem {
+        width: 20%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 500;
+        color: $primaryClr;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        user-select: none;
+        background-color: #f3de79;
+
+        &.active {
+          background-color: #8c897b;
+        }
+      }
+    }
+  }
+
+  .tabBody {
+    width: 100%;
+
+    .tabBodyList {
+      width: 100%;
+      display: flex;
+
+      .tabBodyItem {
+        width: 100%;
+        padding: 30px;
+        font-size: 23px;
+        word-spacing: 3px;
+        line-height: 120%;
+        color: $primaryClr;
+        background-color: #f3de79;
+        transition: all 0.3s ease;
+        display: none;
+
+        &.active {
+          display: block;
+          background-color: #8c897b;
+        }
+      }
+    }
+  }
+}
+//* Tab End
+
+//* Responsive Tab Start
+@media (max-width: 1050px) {
+  .about {
+    .tab {
+      .tabHeader {
+        .tabHeaderList {
+          .tabHeaderItem {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .about {
+    .tab {
+      .tabHeader {
+        .tabHeaderList {
+          .tabHeaderItem {
+            width: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .about {
+    .aboutTitle {
+      margin-bottom: 0;
+    }
+    .tab {
+      padding-bottom: 30px;
+      .tabHeader {
+        .tabHeaderList {
+          .tabHeaderItem {
+            width: 35%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .about {
+    .aboutTitle {
+      padding: 10px 40px;
+    }
+    .tab {
+      .tabHeader {
+        .tabHeaderList {
+          .tabHeaderItem {
+            width: 50%;
+          }
+        }
+      }
+
+      .tabBody {
+        .tabBodyList {
+          .tabBodyItem {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .about {
+    padding-bottom: 15px;
+    .aboutTitle {
+      padding: 30px 40px 20px;
+    }
+
+    .tab {
+      .tabHeader {
+        .tabHeaderList {
+          .tabHeaderItem {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .tabBody {
+        .tabBodyList {
+          .tabBodyItem {
+            font-size: 18px;
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+//* Responsive Tab End
+
+
+.about {
+  //* Accordion Start
+  .accordion {
+    width: 100%;
+
+    .accordionList {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .accordionItem {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .accordionHead {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 150px;
+          cursor: pointer;
+          background-color: #f3de79;
+          border: 0.1px solid #8c897b;
+
+          .accordionTitle {
+            font-size: 25px;
+            font-weight: 500;
+            color: $primaryClr;
+            padding: 10px 0;
+          }
+
+          span {
+            font-size: 30px;
+            font-weight: 500;
+            color: $primaryClr;
+            padding: 13px 0 9px 0;
+          }
+        }
+
+        .accordionBody {
+          background-color: #8c897b;
+          padding: 20px 50px;
+          color: $primaryClr;
+          font-size: 23px;
+          line-height: 130%;
+          transition: all .3s ease;
+          display: none;
+
+          &.active{
+            display: block;
+          }
+
+          span {
+            display: block;
+            color: $primaryClr;
+            font-size: 23px;
+            line-height: 130%;
+          }
+        }
+      }
+    }
+  }
+  //* Accordion End
+
+  //* Accordion Responsive Start
+  @media (max-width: 1000px) {
+    .accordion {
+      .accordionList {
+        .accordionItem {
+          .accordionHead {
+            padding: 10px 50px;
+          }
+        }
+      }
+    }
+  }
+  //* Accordion Responsive End
+}
+
+//! About File End
